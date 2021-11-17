@@ -4,8 +4,7 @@ from timeit import timeit
 def recurs(stop, a=0, b=1, i=2):
     if i > stop:
         return b
-    else:
-        return recurs(stop, a=b, b=a+b, i=i+1)
+    return recurs(stop, a=b, b=a+b, i=i+1)
 
 
 def closure():
