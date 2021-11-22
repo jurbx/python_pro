@@ -7,6 +7,7 @@ def rep(repeat: int, file: str):
             res = timeit(stmt=f'{func(*args, **kwargs)}', number=repeat)
             doc = open(file, 'w')
             doc.write(f'{res}')
+            doc.close()
             return func(*args, **kwargs)
         return wrapped
     return decorator
