@@ -4,7 +4,7 @@ def decorator(func):
     def wrapped(*args, **kwargs):
         nonlocal i
         i += 1
-        return f'{func(args, kwargs)}, {i}'
+        return f'{func(*args, **kwargs)}, {i}'
     return wrapped
 
 
